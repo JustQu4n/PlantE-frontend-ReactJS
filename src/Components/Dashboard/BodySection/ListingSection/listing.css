@@ -1,0 +1,268 @@
+/* Colors adn Styles (Default) */
+:root {
+  --PrimaryColor: hsl(94, 59%, 35%);
+  --HoverColor: #bdf094;
+  --paleGreen: hsl(96, 75%, 89%);
+  --whiteColor: hsl(0, 0%, 100%);
+  --blackColor: hsl(0, 0%, 18%);
+  --textColor: hsl(240, 1%, 48%);
+  --bgColor: hsl(220, 10%, 94%);
+  --greyText: rgb(190, 190, 190);
+  --inputColor: hsl(330, 12%, 97%);
+  --itemCardColor: hsl(120, 5%, 88%);
+  --itemCardHover: hsl(120, 27%, 87%);
+  /* Font ang Typography */
+  --biggestFontSize: 2.5rem;
+  --h1FontSize: 1.5rem;
+  --h2FontSize: 1.25rem;
+  --h3FontSize: 1rem;
+  --normalFontSize: .938rem;
+  --smallFontSize: .813rem;
+  --smallestFontSize: .75rem;
+}
+
+.lisitingSection {
+  flex-basis: 70%;
+}
+.lisitingSection .heading {
+  width: 100%;
+  justify-content: space-between;
+}
+.lisitingSection .heading h1 {
+  font-size: var(--h2FontSize);
+  color: var(--blackColor);
+  font-weight: 700;
+}
+.lisitingSection .heading .btn {
+  border: 1px solid transparent;
+  font-weight: 500;
+}
+.lisitingSection .heading .btn:hover {
+  border: 1px solid var(--PrimaryColor);
+}
+.lisitingSection .secContainer {
+  width: 100%;
+  margin: 1rem 0;
+  gap: 1rem;
+}
+.lisitingSection .secContainer .singleItem {
+  position: relative;
+  width: 150px;
+  height: 170px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  /* padding: 1rem; */
+  border-radius: 10px;
+  background: var(--itemCardColor);
+}
+.lisitingSection .secContainer .singleItem:hover {
+  background: var(--itemCardHover);
+  box-shadow: 0 2px 2px var(--inputColor);
+}
+.lisitingSection .secContainer .singleItem img {
+  max-width: 100px;
+}
+.lisitingSection .secContainer .singleItem .icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: var(--PrimaryColor);
+}
+.lisitingSection .secContainer .singleItem h3 {
+  font-size: var(--h3FontSize);
+  color: var(--blackColor);
+  padding: 1rem 0;
+}
+.lisitingSection .sellers {
+  width: 100%;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: flex-start;
+}
+.lisitingSection .sellers .topSellers .heading,
+.lisitingSection .sellers .featuredSellers .heading {
+  padding: 1rem 0;
+}
+.lisitingSection .sellers .topSellers .heading .btn,
+.lisitingSection .sellers .featuredSellers .heading .btn {
+  padding: 0.5rem 1rem;
+}
+.lisitingSection .sellers .topSellers .card,
+.lisitingSection .sellers .featuredSellers .card {
+  padding: 1rem 1.5rem;
+  border-radius: 1rem;
+  background: var(--whiteColor);
+  gap: 1rem;
+  box-shadow: 0 2px 4px var(--inputColor);
+}
+.lisitingSection .sellers .topSellers .card .users,
+.lisitingSection .sellers .featuredSellers .card .users {
+  padding-right: 1rem;
+  border-right: 2px solid var(--greyText);
+}
+.lisitingSection .sellers .topSellers .card .users img,
+.lisitingSection .sellers .featuredSellers .card .users img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 2px solid var(--inputColor);
+  transition: 0.5s ease;
+}
+.lisitingSection .sellers .topSellers .card .users img:hover,
+.lisitingSection .sellers .featuredSellers .card .users img:hover {
+  transform: translateY(-10px);
+}
+.lisitingSection .sellers .topSellers .card .cardText span,
+.lisitingSection .sellers .featuredSellers .card .cardText span {
+  color: var(--blackColor);
+  font-weight: 500;
+}
+.lisitingSection .sellers .topSellers .card .cardText span small,
+.lisitingSection .sellers .featuredSellers .card .cardText span small {
+  font-weight: 400;
+}
+.lisitingSection .sellers .topSellers .card .cardText span small .date,
+.lisitingSection .sellers .featuredSellers .card .cardText span small .date {
+  margin-left: 1rem;
+}
+
+@media screen and (max-width: 990px) {
+  .lisitingSection .sellers .card {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 918px) {
+  .lisitingSection .singleItem {
+    width: 200px !important;
+  }
+}
+@media screen and (max-width: 490px) {
+  .lisitingSection .sellers {
+    flex-direction: column;
+  }
+  .lisitingSection .sellers .card {
+    flex-direction: row;
+  }
+}/*# sourceMappingURL=listing.css.map */
+
+/* Add these styles to your existing CSS */
+
+.singleItem {
+  position: relative;
+  width: 23%;
+  height: 220px;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border-radius: 10px;
+  gap: 0.5rem;
+  background: var(--cardBG);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+  overflow: hidden;
+}
+
+.singleItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.singleItem .favoriteIcon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.7);
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.2s;
+}
+
+.singleItem .favoriteIcon:hover {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.singleItem .icon {
+  font-size: 1.2rem;
+  color: var(--blackColor);
+}
+
+.singleItem .icon.favorite {
+  color: #e74c3c;
+}
+
+.singleItem img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin: auto;
+}
+
+.singleItem h3 {
+  font-size: 1rem;
+  line-height: 1.2;
+  font-weight: 600;
+  color: var(--blackColor);
+  margin-bottom: 0.2rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.singleItem .price {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--primaryColor);
+}
+
+.singleItem .stock {
+  font-size: 0.8rem;
+  color: var(--textColor);
+  margin-top: 0.2rem;
+}
+
+.loading, .error, .noProducts {
+  width: 100%;
+  padding: 2rem;
+  text-align: center;
+  background: var(--cardBG);
+  border-radius: 10px;
+  margin-top: 1rem;
+}
+
+.error {
+  color: #e74c3c;
+}
+
+.noProducts {
+  color: var(--textColor);
+}
+
+/* Responsive */
+@media screen and (max-width: 990px) {
+  .secContainer {
+    /* flex-wrap: wrap; */
+    gap: 1.5rem;
+  }
+  
+  .singleItem {
+    width: 48%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .singleItem {
+    width: 100%;
+  }
+}

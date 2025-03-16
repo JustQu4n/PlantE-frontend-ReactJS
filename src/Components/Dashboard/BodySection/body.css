@@ -1,0 +1,18 @@
+.mainContent {
+  width: 82%;
+  height: 100%;
+  padding: 2rem;
+  overflow: auto;
+}
+.mainContent .bottom {
+  gap: 2rem;
+  align-items: flex-start;
+}
+.content {
+  margin-top: 5rem;
+}
+@media screen and (max-width: 918px) {
+  .bottom {
+    flex-direction: column;
+  }
+}/*# sourceMappingURL=body.css.map */
