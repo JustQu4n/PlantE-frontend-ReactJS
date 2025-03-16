@@ -28,7 +28,7 @@ const Login = () => {
         }
         
         // FIX: Changed property names to match backend expectations (username, password)
-        Axios.post(`${process.env.REACT_APP_API_URL}/api/auth/login`, {
+        Axios.post(`${import.meta.env.VITE_API_URL}/api/auth/login`, {
             username: loginUserName,
             password: loginPassword
         }).then((response) => {

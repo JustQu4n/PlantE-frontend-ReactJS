@@ -20,7 +20,7 @@ const Register = () => {
 
     const createUser = (e) => {
         e.preventDefault()
-        Axios.post(`${process.env.REACT_APP_API_URL}/api/auth/register`, {
+        Axios.post(`${import.meta.env.VITE_API_URL}/api/auth/register`, {
             email: email,
             username: userName,
             password: password

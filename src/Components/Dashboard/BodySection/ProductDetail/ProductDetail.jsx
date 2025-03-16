@@ -24,7 +24,7 @@ const ProductDetail = () => {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/plantpots/${id}`);
+        const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/plantpots/${id}`);
         setProduct(response.data);
         setFormData({
           name: response.data.name || "",
@@ -65,7 +65,7 @@ const ProductDetail = () => {
         qty: Number(formData.qty)
       };
 
-      const response = await axios.put(`${process.env.REACT_APP_API_URL}/api/plantpots/${id}`, updatedData);
+      const response = await axios.put(`${import.meta.env.VITE_API_URL}/api/plantpots/${id}`, updatedData);
       setProduct(response.data);
       toast.success("Cập nhật sản phẩm thành công!");
       setIsEditing(false);
@@ -82,7 +82,7 @@ const ProductDetail = () => {
     setLoading(true);
 
     try {
-      await axios.delete(`${process.env.REACT_APP_API_URL}/api/plantpots/${id}`);
+      await axios.delete(`${import.meta.env.VITE_API_URL}/api/plantpots/${id}`);
       toast.success("Xóa sản phẩm thành công!");
       navigate("/dashboard/products"); // Redirect to products list
     } catch (err) {

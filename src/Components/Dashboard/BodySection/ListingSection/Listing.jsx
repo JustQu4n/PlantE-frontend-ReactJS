@@ -19,7 +19,7 @@ const Listing = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/plantpots/`);
+        const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/plantpots/`);
         console.log('API Response:', response.data);
         
         // Determine if response data is an array or needs extraction
