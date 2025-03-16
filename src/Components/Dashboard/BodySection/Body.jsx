@@ -17,8 +17,8 @@ const Body = () => {
         {/* <Listing /> */}
         <Routes>
           <Route path="/" element={<ProductList />} />
-          <Route path='/products' element={<ProductList />} />
-          <Route path='/products/create' element={<Product />} />
+          <Route path="/products" element={<ProductList />} />
+          <Route path="/products/create" element={<Product />} />
         </Routes>
       </div>
     </div>
