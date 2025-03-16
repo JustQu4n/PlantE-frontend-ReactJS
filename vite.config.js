@@ -9,6 +9,7 @@ export default defineConfig({
     historyApiFallback: true,
   },
   build: {
+    sourcemap: false,
     outDir: 'dist', // Render yêu cầu thư mục build là 'dist'
   },
 })
