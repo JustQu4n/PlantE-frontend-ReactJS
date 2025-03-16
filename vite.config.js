@@ -5,4 +5,10 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   base: '/',
   plugins: [react()],
+  server: {
+    historyApiFallback: true,
+  },
+  build: {
+    outDir: 'dist', // Render yêu cầu thư mục build là 'dist'
+  },
 })
