@@ -1,10 +1,8 @@
+"use client";
 import './App.css';
 import Dashboard from './Components/Dashboard/Dashboard';
 import Login from './Components/Login/Login';
 import Register from './Components/Register/Register';
-import ProductDetail from './Components/Dashboard/BodySection/ProductDetail/ProductDetail';
-import ProductList from './Components/Dashboard/BodySection/ProductList/ProductList';
-import ProductForm from './Components/Dashboard/BodySection/ProductSection/Product';
 import {
   createBrowserRouter,
   RouterProvider
