@@ -16,7 +16,7 @@ const ProductList = () => {
           console.log('Đang tải dữ liệu sản phẩm...');
           
           // Sử dụng endpoint chính xác và thêm log đầy đủ
-          const response = await axios.get('http://localhost:3002/api/plantpots');
+          const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/plantpots`);
           
           // Kiểm tra tất cả các keys trong response.data để tìm mảng
           if (response.data && typeof response.data === 'object') {
@@ -60,7 +60,7 @@ const ProductList = () => {
           // Nếu vẫn không có dữ liệu, thử fetch với endpoint khác
           if (productsData.length === 0) {
             console.log('Trying alternative endpoint...');
-            const altResponse = await axios.get('http://localhost:3002/api/plantpots/all');
+            const altResponse = await axios.get(`${process.env.REACT_APP_API_URL}/api/plantpots/all`);
             console.log('Alternative API Response:', altResponse.data);
             
             if (Array.isArray(altResponse.data)) {

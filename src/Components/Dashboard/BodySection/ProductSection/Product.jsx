@@ -61,7 +61,7 @@ export default function CreatePlantPot() {
       console.log("Sending data with image...");
       
       const response = await axios.post(
-        "http://localhost:3002/api/plantpots/", 
+        `${process.env.REACT_APP_API_URL}/api/plantpots/`, 
         productFormData,
         {
           headers: {
