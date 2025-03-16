@@ -51,7 +51,7 @@ const Top = () => {
     setLoading(true);
     try {
       // Fetch tất cả sản phẩm từ API
-      const response = await axios.get('http://localhost:3002/api/plantpots/');
+      const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/plantpots/`);
       
       let allProducts = [];
       if (Array.isArray(response.data)) {

@@ -5,6 +5,7 @@ import Listing from './ListingSection/Listing'
 import { Routes, Route } from 'react-router-dom'
 import ProductList from './ProductList/ProductList'
 import Product from './ProductSection/Product'
+import ProductDetail from './ProductDetail/ProductDetail'
 
 
 const Body = () => {
