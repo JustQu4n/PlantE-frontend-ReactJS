@@ -5,7 +5,6 @@ import Listing from './ListingSection/Listing'
 import { Routes, Route } from 'react-router-dom'
 import ProductList from './ProductList/ProductList'
 import Product from './ProductSection/Product'
-import ProductDetail from './ProductDetail/ProductDetail'
 
 
 const Body = () => {
@@ -17,8 +16,7 @@ const Body = () => {
         {/* <Listing /> */}
         <Routes>
           <Route path="/" element={<ProductList />} />
-          <Route path="/products" element={<ProductList />} />
-          <Route path="/products/create" element={<Product />} />
+          <Route path="/products-create" element={<Product />} />
         </Routes>
       </div>
     </div>

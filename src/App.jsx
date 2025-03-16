@@ -4,6 +4,7 @@ import Dashboard from './Components/Dashboard/Dashboard';
 import Login from './Components/Login/Login';
 import Register from './Components/Register/Register';
 import ProductDetail from './Components/Dashboard/BodySection/ProductDetail/ProductDetail';
+import ProductForm from './Components/Dashboard/BodySection/ProductSection/Product';
 import {
   createBrowserRouter,
   RouterProvider
@@ -27,8 +28,11 @@ const router = createBrowserRouter([
   {
     path: '/products-detail/:id',
     element: <div><ProductDetail /></div>
+  },
+  {
+    path: '/products-create',
+    element: <div><ProductForm /></div>
   }
-
 ])
 
 function App() {
