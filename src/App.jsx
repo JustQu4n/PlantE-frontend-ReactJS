@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider, Navigate, Outlet } from 'react-rou
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import LoadingSpinner from './Components/Loading/LoadingSpinner'; // Create this component
+import ProductList from './Components/Dashboard/BodySection/ProductList/ProductList';
 
 // Lazy load components for better performance
 const Login = lazy(() => import('./Components/Login/Login'));
@@ -93,6 +94,14 @@ const router = createBrowserRouter([
             element: (
               <Suspense fallback={<LoadingSpinner />}>
                 <ProductForm />
+              </Suspense>
+            )
+          },
+          {
+            path: '/list',
+            element: (
+              <Suspense fallback={<LoadingSpinner />}>
+               <ProductList/>
               </Suspense>
             )
           }

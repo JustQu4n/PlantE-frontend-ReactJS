@@ -48,10 +48,10 @@ const Sidebar = () => {
           </li>
 
           <li className="listItem">
-            <a href="/dashboard/products-create" className="menuLink flex">
+            <a href="/list" className="menuLink flex">
               <BsTrophy className="icon" />
               <span className="smallText">
-                Create Products
+                List Products
               </span>
             </a>
           </li>

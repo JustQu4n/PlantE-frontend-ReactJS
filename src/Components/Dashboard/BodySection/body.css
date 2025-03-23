@@ -4,15 +4,104 @@
   padding: 2rem;
   overflow: auto;
 }
+
 .mainContent .bottom {
+  display: flex;
   gap: 2rem;
   align-items: flex-start;
 }
-.content {
-  margin-top: 5rem;
+
+/* Product layout container */
+.product-container {
+  display: flex;
+  gap: 2rem;
+  width: 100%;
 }
+
+/* Left column - Product list */
+.product-list {
+  flex: 2;
+  background-color: var(--white-color, #ffffff);
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+}
+
+/* Right column - Product form */
+.product-form-container {
+  flex: 1;
+  background-color: var(--white-color, #ffffff);
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+  position: sticky;
+  top: 2rem;
+}
+
+/* General content styling */
+.content {
+  margin-top: 2rem;
+  background-color: var(--white-color, #ffffff);
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.content h2, .product-list h2, .product-form-container h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  color: var(--black-color, #2e2e2e);
+  font-weight: 600;
+}
+
+.content .section {
+  margin-bottom: 2rem;
+}
+
+.content .section:last-child {
+  margin-bottom: 0;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 1200px) {
+  .product-container {
+    flex-direction: column;
+  }
+  
+  .product-form-container {
+    position: static;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .content, .product-list, .product-form-container {
+    padding: 1.25rem;
+  }
+}
+
 @media screen and (max-width: 918px) {
   .bottom {
     flex-direction: column;
   }
-}/*# sourceMappingURL=body.css.map */
+  
+  .content, .product-list, .product-form-container {
+    margin-top: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .content, .product-list, .product-form-container {
+    padding: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .content h2, .product-list h2, .product-form-container h2 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+}

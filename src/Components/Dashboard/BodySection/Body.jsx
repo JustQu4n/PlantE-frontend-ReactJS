@@ -11,13 +11,9 @@ const Body = () => {
   return (
     <div className='mainContent'>
       <Top />
-
-      <div className='content'>
-        {/* <Listing /> */}
-        <Routes>
-          <Route path="/" element={<ProductList />} />
-          <Route path="/products-create" element={<Product />} />
-        </Routes>
+      <div className='product-container'>
+      <div className="product-list"><ProductList /></div>
+      <div className="product-form-container"><Product /></div>
       </div>
     </div>
   )
