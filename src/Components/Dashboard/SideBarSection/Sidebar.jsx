@@ -6,8 +6,24 @@ import { MdDeliveryDining, MdOutlineExplore, MdOutlinePermContactCalendar } from
 import { BsTrophy, BsCreditCard2Front, BsQuestionCircle } from 'react-icons/bs'
 import { AiOutlinePieChart } from 'react-icons/ai'
 import { BiTrendingUp, BiLogOutCircle } from 'react-icons/bi'
+import { useNavigate } from 'react-router-dom'
+import { toast } from 'react-toastify'
 
 const Sidebar = () => {
+  const navigate = useNavigate();
+  
+  const handleLogout = () => {
+    // Clear all authentication data
+    localStorage.removeItem('accessToken');
+    localStorage.removeItem('refreshToken');
+    localStorage.removeItem('user');
+    
+    // Show logout notification
+    toast.success('Logged out successfully');
+    
+    // Redirect to login page
+    navigate('/');
+  };
   return (
     <div className='sideBar grid'>
 
@@ -106,12 +122,12 @@ const Sidebar = () => {
           </li>
 
           <li className="listItem">
-            <a href="/" className="menuLink flex">
+            <button onClick={handleLogout} className="menuLink flex" style={{ background: 'none', border: 'none', width: '100%', textAlign: 'left', cursor: 'pointer' }}>
               <BiLogOutCircle className="icon" />
               <span className="smallText">
                 Log Out
               </span>
-            </a>
+            </button>
           </li>
         </ul>
       </div>
