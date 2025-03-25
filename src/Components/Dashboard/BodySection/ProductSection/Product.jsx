@@ -2,8 +2,10 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import "./ProductForm.css";
 import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 
 export default function CreatePlantPot() {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: "",
     price: "",
@@ -82,6 +84,9 @@ export default function CreatePlantPot() {
       });
       setImageFile(null);
       setImagePreview("");
+      setTimeout(() => {
+        navigate("/dashboard/products");
+      }, 1500);
     } catch (error) {
       console.error("Error:", error);
       toast.error(error.response?.data?.error || "Không thể tạo sản phẩm");
