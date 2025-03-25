@@ -74,7 +74,7 @@ export default function CreatePlantPot() {
       
       console.log("Response:", response.data);
       toast.success("Tạo sản phẩm thành công!");
-      
+      navigate("/dashboard/products"); // 
       // Reset form
       setFormData({
         name: "",
@@ -84,9 +84,7 @@ export default function CreatePlantPot() {
       });
       setImageFile(null);
       setImagePreview("");
-      setTimeout(() => {
-        window.location.href = "/dashboard/products";
-      }, 1500);
+      
     } catch (error) {
       console.error("Error:", error);
       toast.error(error.response?.data?.error || "Không thể tạo sản phẩm");
