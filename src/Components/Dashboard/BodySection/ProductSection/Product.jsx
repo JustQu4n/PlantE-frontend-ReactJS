@@ -82,10 +82,6 @@ export default function CreatePlantPot() {
       });
       setImageFile(null);
       setImagePreview("");
-      setTimeout(() => {
-        window.location.reload();
-      }, 1500);
-      
     } catch (error) {
       console.error("Error:", error);
       toast.error(error.response?.data?.error || "Không thể tạo sản phẩm");
