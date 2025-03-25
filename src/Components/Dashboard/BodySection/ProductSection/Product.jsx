@@ -85,7 +85,7 @@ export default function CreatePlantPot() {
       setImageFile(null);
       setImagePreview("");
       setTimeout(() => {
-        navigate("/dashboard/products");
+        window.location.href = "/dashboard/products";
       }, 1500);
     } catch (error) {
       console.error("Error:", error);
